@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "__MSG_name__",
+    "name": "Adguard",
     "short_name": "__MSG_short_name__",
     "author": "Adguard Software Ltd",
     "default_locale": "en",
@@ -14,7 +14,7 @@
             "19": "assets/icons/green-19.png",
             "38": "assets/icons/green-38.png"
         },
-        "default_title": "__MSG_name__",
+        "default_title": "Adguard",
         "default_popup": "pages/popup.html"
     },
     "background": {

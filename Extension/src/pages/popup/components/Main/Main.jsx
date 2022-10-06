@@ -4,7 +4,6 @@ import { observer } from 'mobx-react';
 import { reactTranslator } from '../../../../common/translators/reactTranslator';
 import { popupStore } from '../../stores/PopupStore';
 import { POPUP_STATES } from '../../constants';
-import { Icon } from '../../../common/components/ui/Icon';
 
 import './main.pcss';
 
@@ -69,20 +68,6 @@ export const Main = observer(() => {
                             </div>
                         </div>
                     </div>
-                    <button
-                        type="button"
-                        className="switcher"
-                        onClick={switcher.handler}
-                        title={reactTranslator.getMessage('popup_switch_button')}
-                    >
-                        <div className={`switcher__center switcher__center--${switcher.mode}`} />
-                        <div className="switcher__btn">
-                            <Icon id="#checkmark" classname="icon--checkmark switcher__icon switcher__icon--checkmark" width="66" height="66" />
-                            <Icon id="#circle" classname="icon--circle switcher__icon switcher__icon--circle" />
-                            <Icon id="#play" classname="icon--play switcher__icon switcher__icon--play" />
-                            <Icon id="#exclamation" classname="icon--exclamation switcher__icon switcher__icon--exclamation" />
-                        </div>
-                    </button>
                     <div className="switcher__info">
                         <div className="current-site">
                             {store.currentSite}

@@ -3,10 +3,7 @@ import { observer } from 'mobx-react';
 
 import { Tabs } from '../Tabs';
 import { Header } from '../Header';
-import { Footer } from '../Footer';
 import { Icons } from '../ui/Icons';
-import { MainContainer } from '../MainContainer';
-import { PromoNotification } from '../PromoNotification';
 import { popupStore } from '../../stores/PopupStore';
 import { messenger } from '../../../services/messenger';
 import { useAppearanceTheme } from '../../../common/hooks/useAppearanceTheme';
@@ -55,10 +52,7 @@ export const Popup = observer(() => {
         <div className="popup">
             <Icons />
             <Header />
-            <MainContainer />
             <Tabs />
-            <Footer />
-            <PromoNotification />
         </div>
     );
 });
