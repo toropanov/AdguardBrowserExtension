@@ -20,7 +20,13 @@ const FiltersUpdate = observer(() => {
     const {
         rulesCount,
         lastUpdateTime,
+        filtersUpdating,
+        isUpdateFiltersButtonActive,
     } = settingsStore;
+
+    const updateClickHandler = async () => {
+      await settingsStore.updateFilters();
+    };
 
     const dateObj = new Date(lastUpdateTime);
 
@@ -34,6 +40,17 @@ const FiltersUpdate = observer(() => {
                     {dateObj.toLocaleDateString('default', formatOptions)}
                 </div>
             </div>
+            <button
+                type="button"
+                onClick={updateClickHandler}
+                className="button button--m button--transparent filters-update__btn"
+                title={reactTranslator.getMessage('options_update_antibanner_filters')}
+                disabled={!isUpdateFiltersButtonActive || filtersUpdating}
+            >
+              {filtersUpdating
+                  ? reactTranslator.getMessage('options_check_update_progress')
+                  : reactTranslator.getMessage('options_check_update')}
+            </button>
         </div>
     );
 });
